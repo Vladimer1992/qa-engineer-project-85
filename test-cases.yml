@@ -569,8 +569,8 @@
     задание - "rect_area"
     решение - "const _ = require("lodash");
     const R = require("rambda");
-    const solution = (width, length) => {
-    return width * length;};
+    const solution = (width, length) => 
+    return width * length;
     module.exports = solution;"
   steps:
     - В аккаунте 1 создаем приглашение для игры с другом с нужным заданием
@@ -582,5 +582,5 @@
     - В аккаунте 1 в редакторе вводим решение
   expected-result: >
     После проверки решения в аккаунте 1 будет выведен текст
-    "Woohoo, you're Champion!!!!!", а в аккаунте 2 выведен текст "If you read
+    "Woohoo, you're Champion!, а в аккаунте 2 выведен текст "If you read
     this you've lost the game"

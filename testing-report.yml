@@ -1,0 +1,136 @@
+---
+- summary: |
+    1. Авторизация через аккаунт Github
+  status: pass
+
+- summary: |
+    2. Авторизация через аккаунт Discord
+  status: pass
+
+- summary: |
+    3. Создание аккаунта через Email
+  status: pass
+
+- summary: |
+    4. Проверка входа пользователя через логин и пароль
+  status: pass
+
+- summary: |
+     5. Проверка входа пользователя с незарегистрированным Email
+  status: pass
+
+- summary: |
+    6. Проверка входа пользователя с верным Email и неверным паролем
+  status: pass
+
+- summary: |
+   7. Добавление к существующему аккаунту авторизации через Github
+  status: pass
+
+- summary: |
+    8. Добавление к существующему аккаунту авторизации через Discord
+  status: pass
+
+- summary: |
+    9. Изменение nickname
+  status: pass
+
+- summary: |
+    10. Восстановление пароля
+  status: fail
+
+- summary: |
+    11. Подкоючиться к уже созданной игре
+  status: pass
+
+- summary: |
+    11. Изменение звукового сопровождения
+  status: pass
+
+- summary: |
+    12. Изменение уровня громкости звукового сопровождения
+  status: pass
+
+- summary: |
+    13. Наличие личного кабинета
+  status: pass
+
+- summary: |
+   14. Смена фотографии пользователя
+  status: pass
+
+- summary: |
+   15. Игра с ботом без регистрации
+  status: pass
+
+- summary: |
+    16. Рейтинг игроков
+  status: pass
+
+- summary: |
+    17. Выбор сложности игры
+  status: pass
+
+- summary: |
+    18. Выбор языка программирования
+  status: pass
+
+- summary: |
+    19. Смена языка во время игры
+  status: pass
+
+- summary: |
+    20. Выбор продолжительности игры
+  status: pass
+
+- summary: |
+    22. Создание приглашения для игры с другом
+  status: pass
+
+- summary: |
+   23. Создание игры со случайным заданием
+  status: pass
+
+- summary: |
+   24. Создание игры с конкретным заданием 
+  status: pass
+
+- summary: |
+    25. Пользователь может наблюдать за играми
+  status: pass
+
+- summary: |
+   26. Комментирование в роли зрителя
+  status: pass
+
+- summary: |
+    27. Комментирование в роли участника игры
+  status: pass
+
+- summary: |
+   28. Выигрыш
+  status: pass
+
+- summary: |
+    29. Ничья после окончания времени игры
+  status: pass
+
+- summary: |
+   30. Подтверждение e-mail при регистрации
+  status: fail
+
+- summary: |
+    31. Изменение e-mail
+  status: fail
+
+- summary: |
+    32. Принятие приглашения для игры с другом
+  status: pass
+
+- summary: |
+   33. Проигрыш через опцию Give Up
+  status: pass
+
+- summary: |
+    34. Проигрыш сопернику
+  status: pass

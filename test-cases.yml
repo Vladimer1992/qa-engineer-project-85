@@ -584,3 +584,22 @@
     После проверки решения в аккаунте 1 будет выведен текст
     "Woohoo, you're Champion!, а в аккаунте 2 выведен текст "If you read
     this you've lost the game"
+
+- summary: |
+    35. Авторизация на некорректный адрес электронной почты
+  requirement: |
+    Пользователь не можит авторизоваться на сайте с некорректным адресом электронной почты
+  prerequisites: |
+    открыта страница https://codebattle.hexlet.io/
+  test-data: |
+    empty
+  steps:
+    - Нажимаем кнопку "Sign up"
+    - Ввести "Colovey12" в поле "Nickname"
+    - Ввести "vlchebnic.cjo" в поле "Email"
+    - Ввести "12334" в поле "Password"
+    - Ввести "12334" во второе поле "Password"
+    - Нажать кнопку "Submit"
+  expected-result: |
+    - Неверный адрес электронной почты
+

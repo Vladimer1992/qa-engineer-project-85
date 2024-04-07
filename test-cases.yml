@@ -460,7 +460,7 @@
     вход в аккаунт
   test-data: |
     задание - "rect_area"
-    решение - "const _ = require("lodash");
+    решение - "const = require("lodash");
     const R = require("rambda");
     const solution = (width, length) => {
     return width * length;};
@@ -474,7 +474,7 @@
     - В редакторе вводим решение
     - Кликаем на кнопку запуска кода
   expected-result: |
-    После проверки решения будет выведен текст "Woohoo, you're Champion!!!!!"
+    После проверки решения будет выведен текст "Woohoo, you re Champion!"
 - summary: |
     29. Ничья после окончания времени игры
   requirement: >
@@ -520,8 +520,8 @@
   requirement: >
     Пользователь может изменит свой e-mail на другой, не занятый другим
     пользователем
-  prerequisites: произведен вход в аккаунт с данными Email =
-    vladimergayer1992@gmail.com, Password = 191982 открыта страница настроек
+  prerequisites: произведен вход в аккаунт с данными "Email =
+    vladimergayer1992@gmail.com", Password = "191982" открыта страница настроек
     https://codebattle.hexlet.io/settings
   test-data: |
     новый e-mail = vladimergayer.1992.@gmail.com
@@ -547,7 +547,7 @@
   expected-result: |
     Произойдет переход в игру с пользователем, приславшим приглашение
 - summary: |
-    33. Проигрыш через опцию Give Up
+    33. Проигрыш через опцию "Give Up"
   requirement: >
     Пользователь может сдаться и таким образом закончить игру отдав
     победу сопернику
@@ -583,8 +583,8 @@
     - В аккаунте 1 в редакторе вводим решение
   expected-result: >
     После проверки решения в аккаунте 1 будет выведен текст
-    "Woohoo, you're Champion!, а в аккаунте 2 выведен текст "If you read
-    this you've lost the game"
+    "Woohoo, you're Champion!, а в аккаунте 2 выведен текст 
+    "If you read this you've lost the game"
 
 - summary: |
     35. Авторизация на некорректный адрес электронной почты

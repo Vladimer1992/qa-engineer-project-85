@@ -42,9 +42,9 @@
     Пользователь может создать аккаунт, указав Email и пароль
   prerequisites: открыта страница https://codebattle.hexlet.io/
   test-data: |
-    - Nickname = vladimer
-    - Email = vladimergayer1992@gmail.com
-    - Password = 191982
+    - Nickname = >
+    - Email = >
+    - Password = >
   steps:
     - Кликаем на кнопку "Sign up"
     - Вводим Nickname
@@ -64,8 +64,8 @@
   prerequisites: открыта страница https://codebattle.hexlet.io/ Создан аккаунт с
     данными Email = badpass@mail.com, Password = strongPassword
   test-data: |
-    - Email = vladimergayer1992@gmail.com
-    - Password = 191982
+    - Email = >
+    - Password = >
   steps:
     - Кликаем на кнопку "Sign in"
     - Вводим Email
@@ -76,13 +76,13 @@
     отображается имя пользователя
     
 - summary: |
-    5. Проверка входа пользователя с незарегистрированным Email
+    5. Проверка невозможности входа пользователя с незарегистрированным Email
   requirement: |
     При неправильном Email пользователь должен получить сообщение об ошибке
-  prerequisites: открыта страница https://codebattle.hexlet.io/
+  prerequisites: Открыта страница https://codebattle.hexlet.io/
   test-data: |
-    - Email = vladimergayer1992@gmail.com
-    - Password = 191982
+    - Email = >
+    - Password = >
   steps:
     - Кликаем на кнопку "Sign in"
     - Вводим Email
@@ -95,11 +95,11 @@
     6. Проверка входа пользователя с верным Email и неверным паролем
   requirement: |
     При неправильном пароле пользователь должен получить сообщение об ошибке
-  prerequisites: открыта страница https://codebattle.hexlet.io/ Создан аккаунт с
-    данными Email = badpass@mail.com, Password = strongPassword
+  prerequisites: Открыта страница https://codebattle.hexlet.io/ Создан аккаунт с
+    данными Email = >             Password = >
   test-data: |
-    - Email = vladimergayer1992@gmail.com
-    - Password = 191982
+    - Email = >
+    - Password = >
   steps:
     - Кликаем на кнопку "Sign in"
     - Вводим Email
@@ -115,8 +115,8 @@
     Пользователь может добавить аккаунту к зарегистрированному аккаунту, способ
     авторизации через Github
   prerequisites: открыта страница настроек https://codebattle.hexlet.io/settings
-    Создан аккаунт с данными Email = vladimergayer1992@gmail.com, Password =
-    191982 и произведен в него вход есть аккаунт на github.com
+    Создан аккаунт с данными Email = >    Password = >   
+    и произведен в него вход есть аккаунт на github.com
   test-data: |
     empty
   steps:
@@ -133,8 +133,8 @@
     Пользователь может добавить к зарегистрированному аккаунту, способ
     авторизации через Discord
   prerequisites: открыта страница настроек https://codebattle.hexlet.io/settings
-    Создан аккаунт с данными Email = vladimergayer1992@gmail.com, Password =
-    191982 и произведен в него вход есть аккаунт на Discord.com
+    Создан аккаунт с данными Email = >   Password = >
+    и произведен в него вход есть аккаунт на Discord.com
   test-data: |
     empty
   steps:
@@ -151,11 +151,11 @@
   requirement: >
     Пользователь может изменить свой nickname на другой, не занятый
     другим пользователем
-  prerequisites: произведен вход в аккаунт с данными Email =
-    vladimergayer1992@gmail.com, Password = 191982 открыта страница настроек
+  prerequisites: произведен вход в аккаунт с данными Email = >   Password = >
+    открыта страница настроек
     https://codebattle.hexlet.io/settings
   test-data: |
-    Nickname = vladimer
+    Nickname = >
   steps:
     - В поле "Your name" вводим Nickname
     - Кликаем на кнопку "Save"
@@ -167,19 +167,19 @@
     10. Восстановление пароля
   requirement: |
     Пользователь может восстановить пароль
-  prerequisites: создан аккаунт с данными Email = vladimergayer1992@gmail.com,
-    Password = 191982 открыта страница https://codebattle.hexlet.io/ вход в
+  prerequisites: создан аккаунт с данными Email = >  Password = >
+    открыта страница https://codebattle.hexlet.io/ вход в
     аккаунт не произведен
   test-data: |
     Password = newPass
-    Email = vladimergayer1992@gmail.com
+    Email = > 
   steps:
     - Кликнуть на кнопку "Sign in"
     - Кликнуть на кнопку "Forgot your password?"
     - В поле "Email" ввести Email
     - Кликнуть на кнопку "Submit" (на почту будет отправлено письмо со ссылкой
       для изменения пароля)
-    - Открыть письмо от noreply@codebattle-5f929.firebaseapp.com
+    - Открыть письмо на почте
     - Кликнуть на ссылку из письма
     - В поле "new password" ввести Password и кликнуть на "Submit"
     - Вернуться на страницу codebattle и кликнуть на "sign in"
@@ -212,6 +212,9 @@
   test-data: |
     Новое звуковое сопровождение = CS
   steps:
+    - Кликаем на свой Nickname с верху с право
+    - Откроется окно
+    - Кликнуть на кнопку "Settings"
     - Кликнуть на кнопку "CS"
     - Кликнуть на кнопку "Save"
     - Подключиться к любой игре
@@ -228,11 +231,16 @@
   test-data: |
     empty
   steps:
+    - Кликаем на свой Nickname с верху с право
+    - Откроется окно
+    - Кликнуть на кнопку "Settings"
     - Перетянуть бегунок громкости до конца вправо до максимального значения
     - Кликнуть на кнопку "Save"
     - Подключиться к любой игре
     - Проверить, увеличилась ли громкость звукового сопровождения
-    - Перейти в настройки
+    - Кликаем на свой Nickname с верху с право
+    - Откроется окно
+    - Кликнуть на кнопку "Settings"
     - Перетянуть бегунок громкости до конца влево до минимального значения
     - Кликнуть на кнопку "Save"
     - Подключиться к любой игре
@@ -246,8 +254,8 @@
   requirement: >
     Пользователь может перейти в свой личный кабинет, где будет
     отображена его статистика
-  prerequisites: произведен вход в аккаунт с данными Email =
-    vladimergayer1992@gmail.com, Password = 191982 открыта главная страница
+  prerequisites: произведен вход в аккаунт с данными Email = >  Password = >
+    открыта главная страница
     https://codebattle.hexlet.io/
   test-data: |
     empty
@@ -264,9 +272,8 @@
     15. Смена фотографии пользователя
   requirement: |
     Пользователь может изменить фото своего профиля
-  prerequisites: произведен вход в аккаунт с данными Email =
-    vladimergayer1992@gmail.com, Password = 191982 открыта главная страница
-    https://codebattle.hexlet.io
+  prerequisites: произведен вход в аккаунт с данными Email = >  Password = > 
+    открыта главная страница https://codebattle.hexlet.io
   test-data: |
     empty
   steps:
@@ -414,7 +421,7 @@
     - Повторно создаем игру с теми же параметрами
     - Сравниваем названия заданий
   expected-result: |
-    Названия заданий не должны совпадать
+  Возможное совподение в названия заданий
     
 - summary: |
     24. Создание игры с конкретным заданием 
@@ -438,11 +445,11 @@
   requirement: |
     Пользователь может подключиться к игре в качестве зрителя
   prerequisites: открыта главная страница https://codebattle.hexlet.io произведен
-    вход в аккаунт
+    вход в аккаунт, игра должна быть активна
   test-data: |
     empty
   steps:
-    - Кликаем на "show" напротив любой из текущих игр
+    - Кликаем на "show" напротив любой из активных игр
     - Пробуем ввести текст в редакторе
   expected-result: |
     Мы видим оба текстовых редактора, но текст невозможно ввести
@@ -453,7 +460,7 @@
     Пользователь может оставлять комментарии в игре, к которой
     подключен в качестве зрителя
   prerequisites: открыта главная страница https://codebattle.hexlet.io/ произведен
-    вход в аккаунт
+    вход в аккаунт игра должна быть доступна для присоединения
   test-data: |
     текст - 'Всем, привет!'
   steps:
@@ -530,9 +537,9 @@
     чтобы подтвердить корректность введенного e-mail
   prerequisites: открыта страница https://codebattle.hexlet.io/
   test-data: |
-    - Nickname = TestEmail
-    - Email = alexandra.grigorchenko@gmail.com
-    - Password = strongPassword
+    - Nickname = >
+    - Email = >
+    - Password = >
   steps:
     - Кликаем на кнопку "Sign up"
     - Вводим Nickname
@@ -546,18 +553,17 @@
     после перехода по ссылке регистрация завершена
     
 - summary: |
-    31. Изменение e-mail
+    31. Изменение Существуещего Email
   requirement: >
-    Пользователь может изменит свой e-mail на другой, не занятый другим
-    пользователем
-  prerequisites: произведен вход в аккаунт с данными "Email =
-    vladimergayer1992@gmail.com", Password = "191982" открыта страница настроек
+    Пользователь может изменит свой Email на другой
+  prerequisites: произведен вход в аккаунт с данными "Email = >   Password = > 
+    oткрыта страница настроек
     https://codebattle.hexlet.io/settings
   test-data: |
-    новый e-mail = vladimergayer.1992.@gmail.com
+    новый Email = >
   steps:
-    - Кликаем на кнопку "change e-mail"
-    - В поле "new e-mail" вводим новый e-mail
+    - Кликаем на кнопку "change Email"
+    - В поле "new Email" вводим новый Email
     - Кликаем на кнопку "Save"
     - На введенную почту придет сообщение со ссылкой для подтверждения адреса
     - Переходим по ссылке из письма
@@ -598,8 +604,8 @@
     Если соперник выполнил задание быстрее пользователь проигрывает
   prerequisites: произведен вход в два аккаунта в разных браузерах
   test-data: |
-    аккаунт 1 - Vladimer1992
-    аккаунт 2 - Vladimer1992v2
+    аккаунт 1 
+    аккаунт 2 
     задание  -  rect_area
     решение  -  const  = require lodash;
     const R  =  require rambda;
@@ -629,10 +635,10 @@
     empty
   steps:
     - Нажимаем кнопку "Sign up"
-    - Ввести "Solovey12" в поле "Nickname"
-    - Ввести "volchebnic@.ccf" в поле "Email"
-    - Ввести "12334" в поле "Password"
-    - Ввести "12334" во второе поле "Password"
+    - Ввести Nickname в поле "Nickname" 
+    - Ввести Email в поле "Email"
+    - Ввести Пороль в поле "Password"
+    - Ввести Пороль во второе поле "Password"
     - Нажать кнопку "Submit"
   expected-result: |
     - Пользователь входит на некорректный адрес электронной почты

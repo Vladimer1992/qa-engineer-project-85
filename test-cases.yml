@@ -13,7 +13,7 @@
     - Кликаем на кнопку "Sign in with Github"
     - После перенаправления на страницу github.com кликнуть на кнопку "Authorize
       vtm9"
-  expected-result: >
+  expected-result: |
     Пользователь должен попасть на главную страницу codebattle,
     справа вверху отображается имя пользователя
     
@@ -32,7 +32,7 @@
     - После перенаправления на страницу Discord.com вводим логи и пароль от
       аккаунта Discord
     - Кликаем на кнопку "Вход"
-  expected-result: >
+  expected-result: |
     Пользователь должен попасть на главную страницу codebattle,
     справа вверху отображается имя пользователя
     
@@ -42,9 +42,7 @@
     Пользователь может создать аккаунт, указав Email и пароль
   prerequisites: открыта страница https://codebattle.hexlet.io/
   test-data: |
-    - Nickname = >
-    - Email = >
-    - Password = >
+    empty
   steps:
     - Кликаем на кнопку "Sign up"
     - Вводим Nickname
@@ -52,26 +50,25 @@
     - Вводим Password
     - Вводим Password повторно
     - Нажимаем кнопку "Submit"
-  expected-result: >
+  expected-result: |
     Пользователь должен попасть на главную страницу справа вверху
     отображается имя пользователя
     
 - summary: |
     4. Проверка входа пользователя через логин и пароль
-  requirement: >
+  requirement: |
     Пользователь может успешно войти в аккаунт с зарегистрированным
     Email и паролем
   prerequisites: открыта страница https://codebattle.hexlet.io/ Создан аккаунт с
     данными Email = badpass@mail.com, Password = strongPassword
   test-data: |
-    - Email = >
-    - Password = >
+    empty
   steps:
     - Кликаем на кнопку "Sign in"
     - Вводим Email
     - Вводим Password
     - Нажимаем кнопку "Submit"
-  expected-result: >
+  expected-result: |
     Пользователь должен попасть на главную страницу, справа вверху
     отображается имя пользователя
     
@@ -81,14 +78,13 @@
     При неправильном Email пользователь должен получить сообщение об ошибке
   prerequisites: Открыта страница https://codebattle.hexlet.io/
   test-data: |
-    - Email = >
-    - Password = >
+    empty
   steps:
     - Кликаем на кнопку "Sign in"
     - Вводим Email
     - Вводим Password
     - Нажимаем кнопку "Submit"
-  expected-result: >
+  expected-result: |
     Выводится сообщение об ошибке "EMAIL_NOT_FOUND", вход в аккаунт не произведен
     
 - summary: |
@@ -96,26 +92,25 @@
   requirement: |
     При неправильном пароле пользователь должен получить сообщение об ошибке
   prerequisites: Открыта страница https://codebattle.hexlet.io/ Создан аккаунт с
-    данными Email = >             Password = >
+    данными Email     Password 
   test-data: |
-    - Email = >
-    - Password = >
+    empty
   steps:
     - Кликаем на кнопку "Sign in"
     - Вводим Email
     - Вводим Password
     - Нажимаем кнопку "Submit"
-  expected-result: >
+  expected-result: |
     Выводится сообщение об ошибке "INVALID_PASSWORD", вход в
     аккаунт не произведен
     
 - summary: |
     7. Добавление к существующему аккаунту авторизации через Github
-  requirement: >
+  requirement: |
     Пользователь может добавить аккаунту к зарегистрированному аккаунту, способ
     авторизации через Github
   prerequisites: открыта страница настроек https://codebattle.hexlet.io/settings
-    Создан аккаунт с данными Email = >    Password = >   
+    Создан аккаунт с данными Email     Password    
     и произведен в него вход есть аккаунт на github.com
   test-data: |
     empty
@@ -123,7 +118,7 @@
     - Кликаем на кнопку "Link Github"
     - После перенаправления на страницу github.com кликнуть на кнопку "Authorize
       vtm9"
-  expected-result: >
+  expected-result: |
     Пользователь перенаправлен обратно на страницу с настройками, в
     настройках появилась ссылка на авторизованный аккаунт github
     
@@ -133,7 +128,7 @@
     Пользователь может добавить к зарегистрированному аккаунту, способ
     авторизации через Discord
   prerequisites: открыта страница настроек https://codebattle.hexlet.io/settings
-    Создан аккаунт с данными Email = >   Password = >
+    Создан аккаунт с данными Email    Password  
     и произведен в него вход есть аккаунт на Discord.com
   test-data: |
     empty
@@ -148,14 +143,14 @@
     
 - summary: |
     9. Изменение nickname
-  requirement: >
+  requirement: |
     Пользователь может изменить свой nickname на другой, не занятый
     другим пользователем
-  prerequisites: произведен вход в аккаунт с данными Email = >   Password = >
+  prerequisites: произведен вход в аккаунт с данными Email    Password 
     открыта страница настроек
     https://codebattle.hexlet.io/settings
   test-data: |
-    Nickname = >
+    empty
   steps:
     - В поле "Your name" вводим Nickname
     - Кликаем на кнопку "Save"
@@ -167,12 +162,11 @@
     10. Восстановление пароля
   requirement: |
     Пользователь может восстановить пароль
-  prerequisites: создан аккаунт с данными Email = >  Password = >
+  prerequisites: создан аккаунт с данными Email    Password 
     открыта страница https://codebattle.hexlet.io/ вход в
     аккаунт не произведен
   test-data: |
-    Password = newPass
-    Email = > 
+    empty  
   steps:
     - Кликнуть на кнопку "Sign in"
     - Кликнуть на кнопку "Forgot your password?"
@@ -204,7 +198,7 @@
     
 - summary: |
     12. Изменение звукового сопровождения
-  requirement: >
+  requirement: |
     Пользователь может изменить звуковое сопровождение и выбрать один
     из 4 вариантов: Dendy, CS, Standart, Silent
   prerequisites: произведён вход в аккаунт открыта страница
@@ -251,10 +245,10 @@
     
 - summary: |
     14. Наличие личного кабинета
-  requirement: >
+  requirement: |
     Пользователь может перейти в свой личный кабинет, где будет
     отображена его статистика
-  prerequisites: произведен вход в аккаунт с данными Email = >  Password = >
+  prerequisites: произведен вход в аккаунт с данными Email =   Password = 
     открыта главная страница
     https://codebattle.hexlet.io/
   test-data: |
@@ -264,7 +258,7 @@
     - В выпадающем меню кликаем на "My Profile"
     - Проверяем наличие раздела с завершенными играми, рейтинга пользователя и
       активности на сайте
-  expected-result: >
+  expected-result: |
     В личном кабинете должны отображаться раздел с завершенными
     играми, рейтинг пользователя и активность на сайте
     
@@ -272,7 +266,7 @@
     15. Смена фотографии пользователя
   requirement: |
     Пользователь может изменить фото своего профиля
-  prerequisites: произведен вход в аккаунт с данными Email = >  Password = > 
+  prerequisites: произведен вход в аккаунт с данными Email =   Password = 
     открыта главная страница https://codebattle.hexlet.io
   test-data: |
     empty
@@ -299,7 +293,7 @@
     
 - summary: |
     17. Рейтинг игроков
-  requirement: >
+  requirement: |
     На главной странице отображается рейтинг игроков за неделю, месяц и все время
   prerequisites: открыта главная страница https://codebattle.hexlet.io произведен
     вход в аккаунт
@@ -307,7 +301,7 @@
     empty
   steps:
     - Кликаем на "All" в разделе "Leaderboard"
-  expected-result: >
+  expected-result: |
     Откроется рейтинг игроков за все время, отображается имя
     пользователя и суммарное количество очков. Так же при наведении курсора на
     имя пользователя отображается его статистика игре и награды.
@@ -386,7 +380,7 @@
     
 - summary: |
     22. Создание приглашения для игры с другом
-  requirement: >
+  requirement: |
     Пользователь может создать игру и пригласить в нее друга,
     зарегистрированного на Codebattle
   prerequisites: открыта главная страница https://codebattle.hexlet.io произведен
@@ -398,7 +392,7 @@
     - Выбираем опцию "with a friend"
     - В списке оппонентов выбираем нужного друга
     - Кликаем на кнопку "create invite"
-  expected-result: >
+  expected-result: |
     А правом верхнем углу отобразится уведомление, при наведении на
     него всплывет окно с текстом "you ivited ShushaAlex"
     
@@ -456,7 +450,7 @@
     
 - summary: |
     26. Комментирование в роли зрителя
-  requirement: >
+  requirement: |
     Пользователь может оставлять комментарии в игре, к которой
     подключен в качестве зрителя
   prerequisites: открыта главная страница https://codebattle.hexlet.io/ произведен
@@ -472,7 +466,7 @@
     
 - summary: |
     27. Комментирование в роли участника игры
-  requirement: >
+  requirement: |
     Пользователь может остовлять комментарии в игре, к которой
     подключен в качестве участника
   prerequisites: открыта главная страница https://codebattle.hexlet.io/ произведен
@@ -496,7 +490,7 @@
     задание - "rect_area"
     решение - "const = require("lodash");
     const R = require("rambda");
-    const solution = (width, length) => {
+    const solution = (width, length) = {
     return width * length;};
     module.exports = solution;"
   steps:
@@ -512,7 +506,7 @@
     
 - summary: |
     29. Ничья после окончания времени игры
-  requirement: >
+  requirement: |
     В случае невыполнения задания в заданное игрой время, результатом
     игры будет ничья
   prerequisites: открыта главная страница https://codebattle.hexlet.io/ произведен
@@ -526,20 +520,20 @@
     - Выбираем минимальное время игры
     - Кликаем на "create battle"
     - Ждем пока игровое время кончится
-  expected-result: >
+  expected-result: |
     После окончания времени будет выаедено сообщение "Time is up.
     There are no winners in the game"
     
 - summary: |
     30. Подтверждение e-mail при регистрации
-  requirement: >
+  requirement: |
     При регистрации через e-mail, на него приходит письмо со ссылкой,
     чтобы подтвердить корректность введенного e-mail
   prerequisites: открыта страница https://codebattle.hexlet.io/
   test-data: |
-    - Nickname = >
-    - Email = >
-    - Password = >
+    - Nickname 
+    - Email 
+    - Password 
   steps:
     - Кликаем на кнопку "Sign up"
     - Вводим Nickname
@@ -548,13 +542,13 @@
     - Вводим Password повторно
     - Нажимаем кнопку "Submit"
     - Переходим по ссылке из письма, которое пришло на введенную почту
-  expected-result: >
+  expected-result: |
     На почту придет письмо со ссылкой для подтверждения e-mail,
     после перехода по ссылке регистрация завершена
     
 - summary: |
     31. Изменение Существуещего Email
-  requirement: >
+  requirement: |
     Пользователь может изменит свой Email на другой
   prerequisites: произведен вход в аккаунт с данными "Email = >   Password = > 
     oткрыта страница настроек
@@ -586,7 +580,7 @@
     
 - summary: |
     33. Проигрыш через опцию "Give Up"
-  requirement: >
+  requirement: |
     Пользователь может сдаться и таким образом закончить игру отдав
     победу сопернику
   prerequisites: произведен вход в аккаунт создана игра с ботом
@@ -620,7 +614,7 @@
     - В аккаунте 1 кликаем на кнопку запуска кода
     - В аккаунте 1 кликаем на "create battle"
     - В аккаунте 1 в редакторе вводим решение
-  expected-result: >
+  expected-result: |
     После проверки решения в аккаунте 1 будет выведен текст
     "Woohoo, you're Champion!, а в аккаунте 2 выведен текст 
     "If you read this you've lost the game"
